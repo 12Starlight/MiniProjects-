@@ -2,12 +2,13 @@ export const RECEIVE_TODOS = 'RECEIVE_TODOS';
 export const RECEIVE_TODO = 'RECEIVE_TODO'; 
 
 
-const receiveTodos = (todos) => ({
+// action creators take in the response from the ajax request 
+export const receiveTodos = (todos) => ({
   type: RECEIVE_TODOS,
   todos: todos
 });
 
-const receiveTodo = (todo) => ({
+export const receiveTodo = (todo) => ({
   type: RECEIVE_TODO,
   todo: todo
 }); 
