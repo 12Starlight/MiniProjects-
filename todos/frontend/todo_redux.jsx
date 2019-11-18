@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import { receiveTodos, receiveTodo } from './actions/todo_actions';
+import App from './components/app';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,5 +12,5 @@ document.addEventListener('DOMContentLoaded', () => {
   window.receiveTodo = receiveTodo; 
 
   const root = document.getElementById('content');
-  ReactDOM.render(<h1>Todo App</h1>, root); 
+  ReactDOM.render(<App />, root); 
 });
