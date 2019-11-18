@@ -1,4 +1,21 @@
 import React from 'react';
+import TodoListItem from './todo_list_item';
 
 
-export default ({todos}) => Object.keys(todos).map((_, i) => <li key={i} >{todos[i].title}</li>)
+const TodoList = ({todos}) => {
+  const listItems = Object.keys(todos).map((id, i) => (
+    <TodoListItem 
+      key={i}
+      todo={todos[id]}
+    />
+  ));
+
+  return (
+    <ul>
+      { listItems }
+    </ul>
+  )
+};
+
+
+export default TodoList; 
